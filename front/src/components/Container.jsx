@@ -65,7 +65,7 @@ class Container extends Component {
               image={project.image}
               goal={project.goal}
               money={project.money}
-              path={`project-detail${project.id}`}
+              path={`/project-detail/${project.id}`}
             />
         })}
         </div>

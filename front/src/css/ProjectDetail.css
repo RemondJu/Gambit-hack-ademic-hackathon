@@ -1,0 +1,18 @@
+.ProjectDetail{
+  max-width: 800px;
+  margin: auto;
+  padding: 15px
+}
+
+.ProjectDetail img{
+  width: 100%;
+}
+
+.ProjectDetail h2, .ProjectDetail h3{
+  text-align: center;
+}
+
+.ProjectDetail p{
+  text-align: justify;
+  margin-top: 25px;
+}
