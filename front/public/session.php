@@ -17,7 +17,7 @@ if (!empty($_POST))
 {
     if ($_POST['login'] == 'Gambit' && $_POST['password'] == 'hack')
     {
-    header('Location: /');
+    header('Location: http://localhost:3000/');
     }else{
 
 ?>
