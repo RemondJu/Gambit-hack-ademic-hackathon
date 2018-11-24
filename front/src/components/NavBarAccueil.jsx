@@ -20,8 +20,8 @@ import '../css/navBar.css';
   render() {
     return (
       <div className="headerHome">
-      <h1>Home</h1>
-      <button type="button">Disconnect</button>
+        <h1>Home</h1>
+        <button type="button">Disconnect</button>
       </div>
     );
   }
