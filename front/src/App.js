@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-        <Route exact path="/" component = {Container} />
+          <Route exact path="/" component = {Container} />
         </Switch>
       </div>
     );
