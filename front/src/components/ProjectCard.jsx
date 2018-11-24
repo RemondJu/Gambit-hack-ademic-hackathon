@@ -3,6 +3,7 @@ import { Button, Card, CardBody, CardSubtitle, CardText, CardTitle } from 'react
 import { NavLink } from 'react-router-dom';
 import '../css/ProjectCard.css'
 
+
 class ProjectCard extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ class ProjectCard extends Component {
               <Button>See more about it</Button>
             </NavLink>
           </CardBody>
-        </Card>
+        </Card>        
       </div>
      );
   }
