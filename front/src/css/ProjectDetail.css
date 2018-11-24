@@ -18,6 +18,10 @@
   display: block;
 }
 
+.ProjectDetail h4{
+  margin-top: 25px;
+}
+
 .ProjectDetail p{
   text-align: justify;
   margin-top: 25px;
