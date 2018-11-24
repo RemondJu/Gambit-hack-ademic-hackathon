@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import Container from './components/Container';
 import ProjectDetail from './components/ProjectDetail';
 import Participate from './components/Participate';
+import Test from './components/Test';
 
 const projects = [
   {
@@ -53,6 +54,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <Test />
         <Switch>
           <Route exact path="/" ><Container projects={projects}/></Route>
           {projects.map(project => <Route key={project.id} path={`/project-detail/${project.id}`}>
