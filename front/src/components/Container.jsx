@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import NavBarAccueil from './NavBarAccueil';
 import Progress from './Progress';
+import NavBarNavigate from './NavBarNavigate';
 
 class Container extends Component {
   render() {
@@ -8,6 +9,7 @@ class Container extends Component {
       <div>
         <NavBarAccueil/>
         <Progress/>
+        <NavBarNavigate/>
       </div>
     )
   }
