@@ -1,0 +1,62 @@
+.FooterNavigate{
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #6590b0;
+  color:white;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+}
+
+
+.buttonHome{
+  margin-bottom: 15px;
+  height: 20px;
+  width: 69px;
+}
+.buttonHome img{
+  height: auto;
+  width: 55%;
+} 
+
+.buttonCard{
+  margin-bottom: 15px;
+  height: 20px;
+  width: 69px;
+}
+.buttonCard img{
+  height: auto;
+  width: 55%;
+} 
+
+.buttonContact{
+  margin-bottom: 15px;
+  height: 20px;
+  width: 69px;
+}
+.buttonContact img{
+  height: auto;
+  width: 55%;
+} 
+
+.buttonGestion{
+  margin-bottom: 15px;
+  height: 20px;
+  width: 69px;
+}
+.buttonGestion img{
+  height: auto;
+  width: 55%;
+} 
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+ 
+}
+
+@media screen and (min-width: 993px) {
+ 
+}

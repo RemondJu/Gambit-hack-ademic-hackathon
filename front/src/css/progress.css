@@ -1,1 +1,41 @@
+.container{
+  z-index: 10;
+  position: fixed;
+  height: 9%;
+  margin-top: 56px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #a4cceb;
+ 
+}
 
+
+.row img{
+  display: flex;
+  margin: 10px;
+}
+
+
+.containerInfo{
+  z-index: 15;
+  position: fixed;
+  height: 250px;
+  width: 280px;
+  margin-top: 156px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(25, 110, 167, 0.9);
+  border-radius: 10px;
+}
+.containerInfo .row{
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.containerInfo h4{
+  margin-right: 35px;
+}
