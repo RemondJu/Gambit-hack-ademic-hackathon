@@ -5,6 +5,7 @@ import NavBarNavigate from './NavBarNavigate';
 import ProjectCard from './ProjectCard';
 import '../css/Container.css';
 
+
 const projects = [
   {
     id: 1,
@@ -69,7 +70,6 @@ class Container extends Component {
             />
         })}
         </div>
-        
       </div>
     )
   }
