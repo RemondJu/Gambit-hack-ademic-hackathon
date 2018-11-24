@@ -4,16 +4,20 @@ import Progress from './Progress';
 import NavBarNavigate from './NavBarNavigate';
 import ProjectCard from './ProjectCard';
 import '../css/Container.css';
+import Filters from './Filters';
 
 class Container extends Component {
   render() {
     return (
       <div className='Container'>
         <NavBarAccueil/>
+        <Filters 
+        filterChoice={this.props.filterChoice}
+        />
         <Progress/>
         <NavBarNavigate/>
         <div className='cardContainer'>
-        {this.props.projects.map(project => {
+        {this.props.projects.filter(project => project.category === this.props.filter).map(project => {
             return <ProjectCard 
               key={project.id}
               name={project.name}

@@ -15,6 +15,7 @@ const ProjectDetail = (props) => {
         <img src={props.image} alt="Project pic"/>
         <p>{props.description}</p>
         <h6>{props.balance} / {props.goal} euros</h6>
+        <div className='Goal'><div className='balance'></div></div>
         <NavLink to={props.link}><button>Support the project</button></NavLink>
       </div>
       <NavBarNavigate />

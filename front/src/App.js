@@ -4,7 +4,6 @@ import { Switch, Route } from 'react-router-dom'
 import Container from './components/Container';
 import ProjectDetail from './components/ProjectDetail';
 import Participate from './components/Participate';
-import Test from './components/Test';
 
 const projects = [
   {
@@ -27,7 +26,7 @@ const projects = [
     id: 3,
     name: 'Project 3',
     description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?',
-    category: 'food',
+    category: 'gastronomy',
     image: 'http://brayinvestmentgroup.com/wp-content/uploads/2018/02/project-funding.jpg',
     goal: 12000,
     balance: 5000,
@@ -35,7 +34,7 @@ const projects = [
     id: 4,
     name: 'Project 4',
     description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?',
-    category: 'social',
+    category: 'education',
     image: 'http://brayinvestmentgroup.com/wp-content/uploads/2018/02/project-funding.jpg',
     goal: 11000,
     balance: 8000,
@@ -51,12 +50,33 @@ const projects = [
 ]
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      filter: '',
+    }
+    this.filterChoice = this.filterChoice.bind(this);
+  }
+
+  filterChoice(e){
+    this.setState({
+      filter: e.target.value,
+    })
+  }
+
+  componentDidUpdate(){
+    console.log(this.state.filter)
+  }
+
   render() {
     return (
       <div className="App">
-      <Test />
         <Switch>
-          <Route exact path="/" ><Container projects={projects}/></Route>
+          <Route exact path="/" ><Container 
+          filter={this.state.filter}
+          projects={projects}
+          filterChoice={this.filterChoice}
+          /></Route>
           {projects.map(project => <Route key={project.id} path={`/project-detail/${project.id}`}>
             <ProjectDetail 
               name={project.name}

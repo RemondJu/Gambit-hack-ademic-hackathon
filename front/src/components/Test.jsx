@@ -18,7 +18,6 @@ class Test extends Component {
   render() { 
     return ( 
       <div>
-        {console.log(this.state.data)}
 
       </div>
      );
