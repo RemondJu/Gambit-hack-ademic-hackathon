@@ -71,4 +71,13 @@ p{
     margin-bottom: 0rem !important;
 }
 
+.Ecology{
+    width: 10px;
+    transition: width 1s linear;
+}
+
+.Ecology:hover{
+    width: 100px;
+}
+
  
