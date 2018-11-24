@@ -10,8 +10,8 @@ class DatabaseConnect {
 
     private $host = "localhost";
     private $db_name = "db_api";
-    private $username = "vladimir";
-    private $password = "BenModef33%";
+    private $username = "root";
+    private $password = "seA1942ttle!";
     private $conn;
 
     public function connect(){
