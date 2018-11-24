@@ -3,7 +3,8 @@ import '../css/ProjectDetail.css'
 import NavBarNavigate from './NavBarNavigate';
 import NavBarAccueil from './NavBarAccueil';
 import { NavLink } from 'react-router-dom';
-
+import Comment from './Comment'
+import comments from '../comments'
 
 const ProjectDetail = (props) => {
   return ( 
@@ -17,8 +18,12 @@ const ProjectDetail = (props) => {
         <h6>{props.balance} / {props.goal} euros</h6>
         <div className='Goal'><div className='balance'></div></div>
         <NavLink to={props.link}><button>Support the project</button></NavLink>
+        <h4>Comments :</h4>
+        {comments.map(comment => <Comment key={comment.id} text={comment.body}/>)}
       </div>
       <NavBarNavigate />
+      
+      
     </div>
    );
 }
