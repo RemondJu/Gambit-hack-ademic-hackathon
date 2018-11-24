@@ -13,11 +13,28 @@ class Container extends Component {
         <NavBarAccueil/>
         <Filters 
         filterChoice={this.props.filterChoice}
+        resetFilter={this.props.resetFilter}
+        rangeChoice={this.props.rangeChoice}
+        rangeFilter={this.props.rangeFilter}
         />
         <Progress/>
         <NavBarNavigate/>
         <div className='cardContainer'>
-        {this.props.projects.filter(project => project.category === this.props.filter).map(project => {
+        {this.props.toggleFilter ? this.props.projects.filter(project => {
+          if(this.props.toggleFilter){
+            if(this.props.rangeFilter !== 100){
+              return ((project.category === this.props.filter)&&(project.distance <= this.props.rangeFilter))
+            } else {
+              return (project.category === this.props.filter)
+            }
+          } else if (this.props.rangeFilter !== 100){
+            if (this.props.toggleFilter){
+              return ((project.category === this.props.filter)&&(project.distance <= this.props.rangeFilter))
+            } else {
+              return (project.distance <= this.props.rangeFilter)
+            }
+          }
+        }).map(project => {
             return <ProjectCard 
               key={project.id}
               name={project.name}
@@ -26,7 +43,16 @@ class Container extends Component {
               image={project.image}
               path={`/project-detail/${project.id}`}
             />
-        })}
+        }) : this.props.projects.filter(project => project.distance <= this.props.rangeFilter).map(project => {
+          return <ProjectCard 
+            key={project.id}
+            name={project.name}
+            category={project.category}
+            description={project.description}
+            image={project.image}
+            path={`/project-detail/${project.id}`}
+          />
+      })}
         </div>
       </div>
     )
