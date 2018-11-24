@@ -22,8 +22,20 @@
   margin-top: 156px;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   background-color: rgba(25, 110, 167, 0.9);
   border-radius: 10px;
 }
+
+.transactionInformation .row{
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.transactionInformation img{
+  margin-left: 205px;
+}
+.transactionInformation .row p{
+  text-align: center;
+  color: white;
+} 
