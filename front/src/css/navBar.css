@@ -1,7 +1,7 @@
 .headerHome{
   z-index: 10;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   background-color:  #6590b0;
@@ -11,8 +11,16 @@
   width: 100%
 }
 .buttonDisconnect{
-  background-color: white;
-  height: 35px;
+    margin-bottom: 15px;
+    height: 20px;
+    width: 69px;
+}
+.buttonDisconnect img{
+  height: auto;
+  width: 45%;
+} 
+h1{
+  margin: auto;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
