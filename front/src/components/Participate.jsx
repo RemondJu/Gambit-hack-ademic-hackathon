@@ -8,7 +8,9 @@ class Participate extends Component {
     super(props);
     this.state = { 
       participationAmount: 0,
+      showCardTransaction: true,
      }
+
      this.handleParticipationamount = this.handleParticipationamount.bind(this)
   }
 
@@ -17,6 +19,21 @@ class Participate extends Component {
       participationAmount: e.target.value,
     })
   }
+
+  handleClickTransactionValidate = () => {
+    this.setState({ 
+      showCardTransaction: true,
+    })
+  }
+
+  handleClickTransactionInfoExit = () => {
+    this.setState({ 
+      showCardTransaction: false,
+    })
+  }
+
+
+
 
   render() {
     return (
@@ -32,7 +49,13 @@ class Participate extends Component {
         </div>
         <span>{this.state.participationAmount}</span>
       </div>
-      
+      {this.state.showCardTransaction ? 
+        <div className="transactionInformation">
+        
+        <button onClick={() => this.handleClickTransactionInfoExit()}><img src="http://image.noelshack.com/fichiers/2018/47/6/1543062389-error-1.png" alt=""/></button>
+        
+        
+      </div> : null }
     </div>
      );
   }
