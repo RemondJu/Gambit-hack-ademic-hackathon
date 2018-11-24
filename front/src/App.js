@@ -5,6 +5,9 @@ import Container from './components/Container';
 import ProjectDetail from './components/ProjectDetail';
 import Participate from './components/Participate';
 import projects from './projects'
+import Statistique from './components/Statistique';
+
+
 
 class App extends Component {
   constructor(props) {
@@ -52,6 +55,7 @@ class App extends Component {
           rangeChoice={this.rangeChoice}
           rangeFilter={this.state.rangeFilter}
           /></Route>
+          <Route exact path="/Stats"><Statistique/></Route>
           {projects.map(project => <Route key={project.id} path={`/project-detail/${project.id}`}>
             <ProjectDetail 
               name={project.name}

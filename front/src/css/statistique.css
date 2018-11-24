@@ -1,0 +1,74 @@
+.containerStats{
+    margin-top: 105px;
+    margin-left: 50px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.rowEcology {
+    display: flex;
+    align-items: center;
+}
+.rowCulture{
+    display: flex;
+    align-items: center;
+}
+.rowHealth{
+    display: flex;
+    align-items: center;
+}
+.rowSport{
+    display: flex;
+    align-items: center;
+}
+.rowEducation {
+    display: flex;
+    align-items: center;
+}
+.rowGastronomy{
+    display: flex;
+    align-items: center;
+}
+
+.containerStats .rowEcology img{
+    display: flex;
+    margin: 15px;
+  
+}
+
+.containerStats .rowCulture img{
+    display: flex;
+    margin: 15px;
+  
+}
+
+.containerStats .rowHealth img{
+    display: flex;
+    margin: 15px;
+  
+}
+
+.containerStats .rowSport img{
+    display: flex;
+    margin: 15px;
+
+}
+
+.containerStats .rowEducation img{
+    display: flex;
+    margin: 15px;
+  
+}
+
+.containerStats .rowGastronomy img{
+    display: flex;
+    margin: 15px;
+  
+}
+
+p{
+    margin-bottom: 0rem !important;
+}
+
+ 
