@@ -15,7 +15,7 @@ class ProjectCard extends Component {
         <Card>
           <CardBody>
             <CardTitle>{this.props.name}</CardTitle>
-            <CardSubtitle>{this.props.type}</CardSubtitle>
+            <CardSubtitle>{this.props.category}</CardSubtitle>
           </CardBody>
           <img width="100%" src={this.props.image} alt="project funding" />
           <CardBody>

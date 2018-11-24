@@ -1,15 +1,21 @@
 .ProjectDetail{
   max-width: 800px;
   margin: auto;
-  padding: 15px
+  padding: 15px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .ProjectDetail img{
   width: 100%;
 }
 
-.ProjectDetail h2, .ProjectDetail h3{
+.ProjectDetail h2, .ProjectDetail h3, .ProjectDetail h6{
   text-align: center;
+}
+.ProjectDetail button{
+  margin: auto;
+  display: block;
 }
 
 .ProjectDetail p{

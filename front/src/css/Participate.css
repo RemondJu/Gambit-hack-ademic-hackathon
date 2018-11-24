@@ -1,0 +1,15 @@
+.slider-wrapper {
+  text-align: center;
+  
+}
+
+.slider-wrapper input {
+  display: block;
+  margin: auto;
+}
+
+.Participate{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
