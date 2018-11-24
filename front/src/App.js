@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import Container from './components/Container';
 import ProjectDetail from './components/ProjectDetail';
 import Participate from './components/Participate';
+import Statistique from './components/Statistique';
 
 const projects = [
   {
@@ -77,6 +78,7 @@ class App extends Component {
           projects={projects}
           filterChoice={this.filterChoice}
           /></Route>
+          <Route exact path="/Stats"><Statistique/></Route>
           {projects.map(project => <Route key={project.id} path={`/project-detail/${project.id}`}>
             <ProjectDetail 
               name={project.name}
