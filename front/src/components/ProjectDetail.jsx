@@ -18,6 +18,13 @@ const ProjectDetail = (props) => {
         <h6>{props.balance} / {props.goal} euros</h6>
         <div className='Goal'><div className='balance'></div></div>
         <NavLink to={props.link}><button>Support the project</button></NavLink>
+        <h3>Your bank helps you to support !</h3>
+        <ul>
+          <li className="bankstep">Step 1 : We invest 25% of the goal.</li>
+          <li className="bankStepToGo">Step 2 : We invest 50% of the goal.</li>
+          <li className="bankStepToGo">Step 3 : We invest 75% of the goal.</li>
+          <li className="bankStepToGo">Step 4 : We invest 100% of the goal.</li>
+        </ul>
         <h4>Comments :</h4>
         {comments.map(comment => <Comment key={comment.id} text={comment.body}/>)}
       </div>

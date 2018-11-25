@@ -8,7 +8,7 @@ import '../css/navBar.css';
     return (
       <div className="headerHome">
       <h1>Home</h1>
-      <Link className='buttonDisconnect' to='/'><img src="http://image.noelshack.com/fichiers/2018/47/6/1543049927-power.png" alt=""/></Link>
+      <a className='buttonDisconnect' href='http://localhost:8000/session.php'><img src="http://image.noelshack.com/fichiers/2018/47/6/1543049927-power.png" alt=""/></a>
       </div>
     );
   }

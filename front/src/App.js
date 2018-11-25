@@ -4,8 +4,8 @@ import { Switch, Route } from 'react-router-dom'
 import Container from './components/Container';
 import ProjectDetail from './components/ProjectDetail';
 import Participate from './components/Participate';
-import projects from './projects'
 import Statistique from './components/Statistique';
+import Test from './components/Test';
 
 
 
@@ -16,6 +16,7 @@ class App extends Component {
       filter: '',
       toggleFilter: false,
       rangeFilter: 100,
+      projects: [],
     }
     this.filterChoice = this.filterChoice.bind(this);
     this.resetFilter = this.resetFilter.bind(this);
@@ -27,6 +28,16 @@ class App extends Component {
       filter: e.target.value,
       toggleFilter: true,
     })
+  }
+
+  componentDidMount(){
+    fetch("http://localhost:8080/api/project/select.php")
+        .then(response => response.json())
+        .then(data => {
+        this.setState({
+            projects: data,          
+        });
+    });
   }
 
   rangeChoice(e){
@@ -45,32 +56,33 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+       {/*  <Test />  */}
         <Switch>
           <Route exact path="/" ><Container 
           filter={this.state.filter}
           toggleFilter={this.state.toggleFilter}
           resetFilter={this.resetFilter}
-          projects={projects}
+          projects={this.state.projects}
           filterChoice={this.filterChoice}
           rangeChoice={this.rangeChoice}
           rangeFilter={this.state.rangeFilter}
           /></Route>
           <Route exact path="/Stats"><Statistique/></Route>
-          {projects.map(project => <Route key={project.id} path={`/project-detail/${project.id}`}>
+          {this.state.projects.map(project => <Route key={project.id} path={`/project-detail/${project.id}`}>
             <ProjectDetail 
               name={project.name}
               description={project.description}
-              image={project.image}
-              category={project.category}
+              image={project.image} 
+              category={project['category_name']}
               goal={project.goal}
               balance={project.balance}
               link={`/project-participation/${project.id}`}
             />
           </Route>)}
-          {projects.map(project => <Route key={project.id} path={`/project-participation/${project.id}`}>
+          {this.state.projects.map(project => <Route key={project.id} path={`/project-participation/${project.id}`}>
             <Participate 
               name={project.name}
-              category={project.category}
+              category={project['category_name']}
               goal={project.goal}
               balance={project.balance}
             />

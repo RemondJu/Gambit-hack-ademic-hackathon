@@ -22,14 +22,14 @@ class Container extends Component {
         <div className='cardContainer'>
         {this.props.toggleFilter ? this.props.projects.filter(project => {
           if(this.props.toggleFilter){
-            if(this.props.rangeFilter !== 100){
-              return ((project.category === this.props.filter)&&(project.distance <= this.props.rangeFilter))
+            if(this.props.rangeFilter !== 100){ 
+              return ((project['category_name'] === this.props.filter)&&(project.distance <= this.props.rangeFilter))
             } else {
-              return (project.category === this.props.filter)
+              return (project['category_name'] === this.props.filter)
             }
-          } else if (this.props.rangeFilter !== 100){
+          } else if (this.props.rangeFilter !== 101){
             if (this.props.toggleFilter){
-              return ((project.category === this.props.filter)&&(project.distance <= this.props.rangeFilter))
+              return ((project['category_name'] === this.props.filter)&&(project.distance <= this.props.rangeFilter))
             } else {
               return (project.distance <= this.props.rangeFilter)
             }
