@@ -12,6 +12,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+}
+
+.Participate h2{
+  margin-top: 50px;
 }
 
 .transactionInformation{
