@@ -6,6 +6,7 @@ import ProjectDetail from './components/ProjectDetail';
 import Participate from './components/Participate';
 import Statistique from './components/Statistique';
 import Test from './components/Test';
+import project from './projects';
 
 
 
@@ -30,15 +31,15 @@ class App extends Component {
     })
   }
 
-  componentDidMount(){
-    fetch("http://localhost:8080/api/project/select.php")
-        .then(response => response.json())
-        .then(data => {
-        this.setState({
-            projects: data,          
-        });
-    });
-  }
+  // componentDidMount(){
+  //   fetch("http://localhost:8080/api/project/select.php")
+  //       .then(response => response.json())
+  //       .then(data => {
+  //       this.setState({
+  //           projects: data,          
+  //       });
+  //   });
+  // }
 
   rangeChoice(e){
     this.setState({
@@ -62,13 +63,13 @@ class App extends Component {
           filter={this.state.filter}
           toggleFilter={this.state.toggleFilter}
           resetFilter={this.resetFilter}
-          projects={this.state.projects}
+          projects={project}
           filterChoice={this.filterChoice}
           rangeChoice={this.rangeChoice}
           rangeFilter={this.state.rangeFilter}
           /></Route>
           <Route exact path="/Stats"><Statistique/></Route>
-          {this.state.projects.map(project => <Route key={project.id} path={`/project-detail/${project.id}`}>
+          {project.map(project => <Route key={project.id} path={`/project-detail/${project.id}`}>
             <ProjectDetail 
               name={project.name}
               description={project.description}
@@ -79,7 +80,7 @@ class App extends Component {
               link={`/project-participation/${project.id}`}
             />
           </Route>)}
-          {this.state.projects.map(project => <Route key={project.id} path={`/project-participation/${project.id}`}>
+          {project.map(project => <Route key={project.id} path={`/project-participation/${project.id}`}>
             <Participate 
               name={project.name}
               category={project['category_name']}
