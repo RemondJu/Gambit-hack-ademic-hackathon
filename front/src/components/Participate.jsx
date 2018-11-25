@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import UserAccount from './UserAccount';
 import '../css/Participate.css'
 import NavBarNavigate from './NavBarNavigate';
+import Progress from './Progress';
 
 
 
@@ -52,6 +53,7 @@ class Participate extends Component {
   render() {
     return (
       <div className='Participate'>
+      <Progress/>
         <NavBarNavigate/>
         <h2>Support the project :</h2>
         <h4>{this.props.name}</h4>
