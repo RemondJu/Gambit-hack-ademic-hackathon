@@ -6,12 +6,12 @@ const Filters = (props) => {
     <div className="Filters">
       <div className="categoryFilters">
         <button onClick={props.resetFilter}>All</button>
-        <button onClick={props.filterChoice} value="ecology">Ecology</button>
-        <button onClick={props.filterChoice} value="sports">Sports</button>
-        <button onClick={props.filterChoice} value="gastronomy">Gastronomy</button>
-        <button onClick={props.filterChoice} value="culture">Culture</button>
+        <button onClick={props.filterChoice} value="Ecology">Ecology</button>
+        <button onClick={props.filterChoice} value="Technology">Culture</button>
         <button onClick={props.filterChoice} value="health">Health</button>
-        <button onClick={props.filterChoice} value="education">Education</button>
+        <button onClick={props.filterChoice} value="DIY">Sports</button>
+        <button onClick={props.filterChoice} value="Gastronomy">Gastronomy</button>
+        <button onClick={props.filterChoice} value="Culture">Education</button>
       </div>
       <div className="rangeFilter">
         <span>Projects distances : {props.rangeFilter} km</span><br/>  

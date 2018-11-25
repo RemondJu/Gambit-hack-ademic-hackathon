@@ -12,6 +12,13 @@
 
 .ProjectDetail h2, .ProjectDetail h3, .ProjectDetail h6{
   text-align: center;
+  margin-top: 15px;
+}
+.ProjectDetail h2{
+  font-size: 1.4em;
+}
+.ProjectDetail h3{
+  font-size: 1.3em;
 }
 .ProjectDetail button{
   margin: auto;
@@ -37,6 +44,28 @@
 .balance{
   background-color: #6590b0;
   min-height: 100%;
-  width: 30%;
+  width: 38%;
   border-radius: 15px;
+}
+
+.bankstep{
+  background-color: #6590b0;
+  border-radius: 15px;
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.bankStepToGo{
+  background-color: lightblue;
+  border-radius: 15px;
+  padding: 5px 10px;
+  list-style-type: none;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+ul{
+  padding: 0;
 }
