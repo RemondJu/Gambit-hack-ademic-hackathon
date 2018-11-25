@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import UserAccount from './UserAccount';
 import '../css/Participate.css'
 import NavBarNavigate from './NavBarNavigate';
-import NavBarAccueil from './NavBarAccueil';
+
 
 
 class Participate extends Component {
@@ -56,7 +56,6 @@ class Participate extends Component {
     return (
       <div className='Participate'>
       <NavBarNavigate/>
-      <NavBarAccueil/>
       <h2>Support the project :</h2>
       <h3>{this.props.name}</h3>
       <UserAccount />

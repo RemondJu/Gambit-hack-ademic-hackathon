@@ -98,7 +98,11 @@ handleClickeducation = () => {
   render() {
     return (
    <div className="container">
+  
+   
+  
     <div className="row">
+    <img className="profil" src="http://image.noelshack.com/fichiers/2018/47/7/1543135351-profilewomen.png" alt=""/>
       <div onClick={() => this.handleClickEcology()} className="ecology"><img style={{opacity: this.state.ecologyBadge}} src="http://image.noelshack.com/fichiers/2018/47/6/1543050898-ecology.png" alt=""/></div>
       <div onClick={() => this.handleClickCulture()} className="culture"><img style={{opacity: this.state.cultureBadge}} src="http://image.noelshack.com/fichiers/2018/47/6/1543050898-ticket.png" alt=""/></div>
       <div onClick={() => this.handleClickHealth()} className="health"><img style={{opacity: this.state.healthBadge}} src="http://image.noelshack.com/fichiers/2018/47/6/1543050898-heart.png" alt=""/></div>

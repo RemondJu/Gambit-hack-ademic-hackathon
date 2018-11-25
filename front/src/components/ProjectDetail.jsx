@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/ProjectDetail.css'
 import NavBarNavigate from './NavBarNavigate';
-import NavBarAccueil from './NavBarAccueil';
 import { NavLink } from 'react-router-dom';
 import Comment from './Comment'
 import comments from '../comments'
@@ -9,7 +8,6 @@ import comments from '../comments'
 const ProjectDetail = (props) => {
   return ( 
     <div className='ProjectDetailContainer'>
-      <NavBarAccueil />
       <div className='ProjectDetail'>
         <h2>{props.name}</h2>
         <h3>{props.category}</h3>

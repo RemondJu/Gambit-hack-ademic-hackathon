@@ -8,10 +8,10 @@ import '../css/navBarNavigate.css';
   render() {
     return (
       <div className="FooterNavigate">
-      <Link className='buttonHome' to='/'><img src="http://image.noelshack.com/fichiers/2018/47/6/1543047821-home.png" alt=""/></Link>
-      <Link className='buttonCard' to='/'><img src="http://image.noelshack.com/fichiers/2018/47/6/1543048810-card.png" alt=""/></Link>
+      <Link className='buttonHome' to='/'><img src="http://image.noelshack.com/fichiers/2018/47/7/1543134167-house.png" alt=""/></Link>
+      <Link className='buttonGestion' to='/'><img src="http://image.noelshack.com/fichiers/2018/47/7/1543133929-search.png" alt=""/></Link>
       <Link className='buttonStats' to='/Stats'><img src="http://image.noelshack.com/fichiers/2018/47/6/1543062516-graph.png" alt=""/></Link>
-      <Link className='buttonGestion' to='/'><img src="http://image.noelshack.com/fichiers/2018/47/6/1543048934-settings-work-tool.png" alt=""/></Link>
+      <Link className='buttonGestion' to='/'><img src="http://image.noelshack.com/fichiers/2018/47/7/1543134110-exit.png" alt=""/></Link>
       </div>
     );
   }

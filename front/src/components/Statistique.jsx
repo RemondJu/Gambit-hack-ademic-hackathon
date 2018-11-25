@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../css/statistique.css';
-import NavBarAccueil from './NavBarAccueil';
 import NavBarNavigate from './NavBarNavigate';
 
 class Statistique extends Component {
@@ -25,7 +24,6 @@ class Statistique extends Component {
   render() {
     return (
       <div>
-        <NavBarAccueil/>
         <NavBarNavigate/>
       <div className="containerStats">
        <h2 style={{marginLeft:"50px"}}>Statistique {this.state.currentCount}</h2>

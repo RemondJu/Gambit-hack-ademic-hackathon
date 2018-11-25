@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import NavBarAccueil from './NavBarAccueil';
 import Progress from './Progress';
 import NavBarNavigate from './NavBarNavigate';
 import ProjectCard from './ProjectCard';
@@ -10,7 +9,7 @@ class Container extends Component {
   render() {
     return (
       <div className='Container'>
-        <NavBarAccueil/>
+      
         <Filters 
         filterChoice={this.props.filterChoice}
         resetFilter={this.props.resetFilter}
