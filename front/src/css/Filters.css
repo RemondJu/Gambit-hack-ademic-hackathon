@@ -1,3 +1,170 @@
 .Filters{
   margin-top: 65px;
 }
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.Filters{
+margin-top: 130px;
+}
+
+.filter-first {
+width: 15%;
+background-color: #FFF;
+border: 2px solid #2D9AEF;
+margin-right: 5px;
+margin-left: 3px;
+color: #2D9AEF;
+transition: .5s;
+font-family: 'Roboto', sans-serif;
+}
+
+.filter-first:hover {
+width: 15%;
+background-color: #2D9AEF;
+border: 2px solid #2D9AEF;
+margin-right: 5px;
+margin-left: 3px;
+color: #FFF;
+font-family: 'Roboto', sans-serif;
+}
+
+.filter-second {
+width: 25%;
+background-color: #FFF;
+border: 2px solid #21B41D;
+margin-right: 5px;
+margin-left: 5px;
+color: #21B41D;
+transition: .5s;
+font-family: 'Roboto', sans-serif;
+overflow:hidden;
+}
+
+.filter-second:hover {
+width: 25%;
+background-color: #21B41D;
+border: 2px solid #21B41D;
+margin-right: 5px;
+margin-left: 5px;
+color: #FFF;
+font-family: 'Roboto', sans-serif;
+}
+
+.filter-third {
+width: 25%;
+background-color: #FFF;
+border: 2px solid #F0AF3F;
+margin-right: 5px;
+margin-left: 5px;
+color: #F0AF3F;
+transition: .5s;
+font-family: 'Roboto', sans-serif;
+overflow:hidden;
+}
+
+.filter-third:hover {
+width: 25%;
+background-color: #F0AF3F;
+border: 2px solid #F0AF3F;
+margin-right: 5px;
+margin-left: 5px;
+color: #FFF;
+font-family: 'Roboto', sans-serif;
+}
+
+.filter-fourth {
+width: 25%;
+background-color: #FFF;
+border: 2px solid #EF6F6A;
+color: #EF6F6A;
+margin-left: 5px;
+transition: .5s;
+font-family: 'Roboto', sans-serif;
+overflow:hidden;
+}
+
+.filter-fourth:hover {
+width: 25%;
+background-color: #EF6F6A;
+border: 2px solid #EF6F6A;
+color: #FFF;
+margin-left: 5px;
+font-family: 'Roboto', sans-serif;
+}
+
+.filter-fifth {
+width: 25%;
+background-color: #FFF;
+border: 2px solid #FF2118;
+color: #FF2118;
+margin-left: 12px;
+margin-right: 5px;
+margin-top: 5px;
+transition: .5s;
+font-family: 'Roboto', sans-serif;
+overflow:hidden;
+}
+
+.filter-fifth:hover {
+width: 25%;
+background-color: #FF2118;
+border: 2px solid #FF2118;
+color: #FFF;
+margin-left: 12px;
+margin-right: 5px;
+margin-top: 5px;
+font-family: 'Roboto', sans-serif;
+}
+
+.filter-sixth {
+width: 32%;
+background-color: #FFF;
+border: 2px solid #125AC5;
+color: #125AC5;
+margin-left: 3px;
+margin-right: 5px;
+margin-top: 5px;
+transition: .5s;
+font-family: 'Roboto', sans-serif;
+overflow:hidden;
+}
+
+.filter-sixth:hover {
+width: 32%;
+background-color: #125AC5;
+border: 2px solid #125AC5;
+color: #FFF;
+margin-left: 3px;
+margin-right: 5px;
+margin-top: 5px;
+font-family: 'Roboto', sans-serif;
+}
+
+.filter-seventh {
+width: 32%;
+background-color: #FFF;
+border: 2px solid #C5A912;
+color: #C5A912;
+margin-left: 3px;
+margin-right: 5px;
+margin-top: 5px;
+transition: .5s;
+font-family: 'Roboto', sans-serif;
+overflow:hidden;
+}
+
+.filter-seventh:hover {
+width: 32%;
+background-color: #C5A912;
+border: 2px solid #C5A912;
+color: #FFF;
+margin-left: 3px;
+margin-right: 5px;
+margin-top: 5px;
+font-family: 'Roboto', sans-serif;
+}
+
+.filter-range {
+width: 95%;
+margin-left: 8px;
+}
