@@ -116,7 +116,7 @@ handleClickeducation = () => {
         <div className="row">
         <img src={this.state.infoCard.img} alt=""/>
         <h5>{this.state.infoCard.title}</h5>
-        <button onClick={() => this.handleClickExit()}><img src="http://image.noelshack.com/fichiers/2018/47/6/1543062389-error-1.png" alt=""/></button>
+        <img onClick={() => this.handleClickExit()} src="http://image.noelshack.com/fichiers/2018/47/6/1543062389-error-1.png" alt=""/>
         </div>
         <div className="row"><p>{this.state.infoCard.description}</p></div>
         <div className="row">Progress: {this.state.infoCard.progress} %</div>

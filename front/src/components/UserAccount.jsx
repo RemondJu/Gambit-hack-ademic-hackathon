@@ -24,8 +24,8 @@ class UserAccount extends Component {
         <h2>My accounts :</h2>
         {this.state.accounts.map(account=> 
         <div account>
-          <span>{account.type}</span><br/>
-          <span>Balance: {account.balance}</span>
+          <span>{account.type} --- </span>
+          <span>Balance: {account.balance} €</span>
         </div>)}
       </div>
     );

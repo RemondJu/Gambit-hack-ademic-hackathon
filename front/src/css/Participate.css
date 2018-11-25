@@ -13,10 +13,34 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  text-align: center;
 }
-
 .Participate h2{
-  margin-top: 50px;
+  background-color: rgb(0, 116, 119, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.5em;
+  width: 100%;
+}
+.Participate h4{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.Participate button, .transactionInformation button{
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.Participation{
+  width: 100%;
+}
+.UserAccount{
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: rgb(0, 116, 119, 0.1);
+  border-radius: 8px;
 }
 
 .transactionInformation{
@@ -24,7 +48,6 @@
   position: fixed;
   height: 250px;
   width: 280px;
-  margin-top: 156px;
   display: flex;
   align-items: center;
   flex-direction: column;

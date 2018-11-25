@@ -26,7 +26,7 @@ class Statistique extends Component {
       <div>
         <NavBarNavigate/>
       <div className="containerStats">
-       <h2 style={{marginLeft:"50px"}}>Statistique {this.state.currentCount}</h2>
+       <h2 style={{marginLeft:"50px"}}>Statistics {this.state.currentCount}</h2>
        <div className="rowEcology">
        <img src="http://image.noelshack.com/fichiers/2018/47/6/1543050898-ecology.png" alt=""/>
        <div className="Ecology" style={{height: "15px", backgroundColor:"blue", borderRadius:"10px", width:this.state.widthStatsEcology + "px" }}></div>

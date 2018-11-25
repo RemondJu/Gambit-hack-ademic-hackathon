@@ -49,27 +49,27 @@ class Participate extends Component {
     })
   }
 
-
-
-
   render() {
     return (
       <div className='Participate'>
         <NavBarNavigate/>
         <h2>Support the project :</h2>
-        <h3>{this.props.name}</h3>
+        <h4>{this.props.name}</h4>
+        <p>Category : {this.props.category}</p>
         <UserAccount />
         <div className='Participation'>
-        <h3>I want to participate by :</h3>
-        <span>Giving financial support</span><br/>
-        <div class="slider-wrapper">
+        <h2>I want to participate by :</h2>
+        <span>Giving financial support : {this.state.participationAmount} €</span><br/>
+        <div class="slider-wrapper">  
         <input type='range' value={this.state.participationAmount} min='0' max='1000' step='10' onChange={this.handleParticipationamount}/>
         </div>
         <button onClick={() => this.handleClickValidate()}>validate the transaction</button>
         {this.state.showCardTransactionValidate ? 
         <div className="transactionInformation">
           <div className="row">
-            <button onClick={() => this.handleClickCancel()}><img src="http://image.noelshack.com/fichiers/2018/47/6/1543062389-error-1.png" alt=""/></button>
+            <img 
+            onClick={() => this.handleClickCancel()}
+            src="http://image.noelshack.com/fichiers/2018/47/6/1543062389-error-1.png" alt=""/>
           </div>
           <div className="row"><p>You will finance the project: {this.props.name} of {this.state.participationAmount}€. Are you sure?</p></div>
           <div><button onClick={() => this.handleClickTransactionValidate()}>Validate</button><button onClick={() => this.handleClickCancel()}>Cancel</button></div>

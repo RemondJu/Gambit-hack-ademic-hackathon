@@ -4,6 +4,7 @@ const Comment = (props) => {
   return ( 
     <div className="Comment">
       <p>{props.text}</p>
+      <hr/>
     </div>
    );
 }
