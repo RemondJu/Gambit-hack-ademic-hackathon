@@ -31,6 +31,7 @@ if($num > 0) {
             'category_name' => $category_name,
             'goal' => $goal,
             'balance' => $balance,
+            'distance' => $distance
         );
         // Push to "data"
         array_push($posts_arr, $post_item);

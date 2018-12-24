@@ -18,6 +18,7 @@ $post->description = $data->description;
 $post->image = $data->image;
 $post->goal = $data->goal;
 $post->balance = $data->balance;
+$post->distance = $data->distance;
 $post->category_id = $data->category_id;
 // Create project
 if($post->create()) {

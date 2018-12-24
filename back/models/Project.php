@@ -18,6 +18,7 @@ class Project {
     public $image;
     public $goal;
     public $balance;
+    public $distance;
 
     public function __construct($db)
     {
@@ -27,7 +28,7 @@ class Project {
     public function read()
     {
         //Query
-        $query = 'SELECT c.name as category_name, p.id, p.category_id, p.name, p.description, p.image, p.goal, p.balance
+        $query = 'SELECT c.name as category_name, p.id, p.category_id, p.name, p.description, p.image, p.goal, p.balance, p.distance
                                 FROM ' . $this->table . ' p
                                 LEFT JOIN
                                   categories c ON p.category_id = c.id';
@@ -42,7 +43,7 @@ class Project {
 
     public function selectOneById(){
         //Query
-        $query = 'SELECT c.name as category_name, p.id, p.category_id, p.name, p.description, p.image, p.goal, p.balance
+        $query = 'SELECT c.name as category_name, p.id, p.category_id, p.name, p.description, p.image, p.goal, p.balance, p.distance
                                 FROM ' . $this->table . ' p
                                 LEFT JOIN
                                   categories c ON p.category_id = c.id WHERE p.id = ? LIMIT 0,1';
@@ -61,6 +62,7 @@ class Project {
         $this->image = $row['image'];
         $this->goal = $row['goal'];
         $this->balance = $row['balance'];
+        $this->distance = $row['distance'];
         $this->category_id = $row['category_id'];
         $this->category_name = $row['category_name'];
     }
@@ -68,7 +70,7 @@ class Project {
     // Create Project
     public function create() {
         // Create query
-        $query = 'INSERT INTO ' . $this->table . ' SET name = :name, description = :description, image = :image, goal = :goal, balance = :balance, category_id = :category_id';
+        $query = 'INSERT INTO ' . $this->table . ' SET name = :name, description = :description, image = :image, goal = :goal, balance = :balance, distance = :distance, category_id = :category_id';
         // Prepare statement
         $statement = $this->conn->prepare($query);
         // Clean data
@@ -77,6 +79,7 @@ class Project {
         $this->image = htmlspecialchars(strip_tags($this->image));
         $this->goal = htmlspecialchars(strip_tags($this->goal));
         $this->balance = htmlspecialchars(strip_tags($this->balance));
+        $this->distance = htmlspecialchars(strip_tags($this->distance));
         $this->category_id = htmlspecialchars(strip_tags($this->category_id));
         // Bind data
         $statement->bindParam(':name', $this->name);
@@ -84,6 +87,7 @@ class Project {
         $statement->bindParam(':image', $this->image);
         $statement->bindParam(':goal', $this->goal);
         $statement->bindParam(':balance', $this->balance);
+        $statement->bindParam(':distance', $this->distance);
         $statement->bindParam(':category_id', $this->category_id);
         // Execute query
         if($statement->execute()) {
@@ -97,7 +101,7 @@ class Project {
     // Update Project
     public function update() {
         // Create query
-        $query = 'UPDATE ' . $this->table . ' SET name = :name, description = :description, image = :image, goal = :goal, balance = :balance, category_id = :category_id
+        $query = 'UPDATE ' . $this->table . ' SET name = :name, description = :description, image = :image, goal = :goal, balance = :balance, category_id = :category_id, distance = :distance
                                 WHERE id = :id';
         // Prepare statement
         $statement = $this->conn->prepare($query);
@@ -107,6 +111,7 @@ class Project {
         $this->image = htmlspecialchars(strip_tags($this->image));
         $this->goal = htmlspecialchars(strip_tags($this->goal));
         $this->balance = htmlspecialchars(strip_tags($this->balance));
+        $this->distance = htmlspecialchars(strip_tags($this->distance));
         $this->category_id = htmlspecialchars(strip_tags($this->category_id));
         $this->id = htmlspecialchars(strip_tags($this->id));
         // Bind data
@@ -115,6 +120,7 @@ class Project {
         $statement->bindParam(':image', $this->image);
         $statement->bindParam(':goal', $this->goal);
         $statement->bindParam(':balance', $this->balance);
+        $statement->bindParam(':distance', $this->distance);
         $statement->bindParam(':category_id', $this->category_id);
         $statement->bindParam(':id', $this->id);
         // Execute query

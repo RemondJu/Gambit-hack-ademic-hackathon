@@ -28,6 +28,7 @@ $post_arr = [
   'image' => $post->image,
   'goal' => $post->goal,
   'balance' => $post->balance,
+  'distance' => $post->distance,
   'category_id' => $post->category_id,
   'category_name' => $post->category_name
 ];
