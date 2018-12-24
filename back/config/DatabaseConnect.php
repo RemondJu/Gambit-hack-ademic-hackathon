@@ -11,7 +11,7 @@ class DatabaseConnect {
     private $host = "localhost";
     private $db_name = "db_api";
     private $username = "root";
-    private $password = "seA1942ttle!";
+    private $password = "******";
     private $conn;
 
     public function connect(){
